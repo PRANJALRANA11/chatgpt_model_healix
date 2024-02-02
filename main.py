@@ -44,7 +44,7 @@ def read_root():
     return {"message": "Chatgpt model for healix"}
 
 
-@app.get("/model")
+@app.post("/model")
 def get_response(user_input: UserInput):
     try :
         message = conversation.predict(input = user_input.input_text)
